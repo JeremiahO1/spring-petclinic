@@ -2,10 +2,10 @@ environments:
 - name: acceptance
 - name: production
 service:
-  name: banana-service
+  name: spring-petclinic
   port: 8080
   pathPatterns:
-  - /bananas
+  - /spring-petclinic
   pipeline:
     source:
       provider: GitHub
