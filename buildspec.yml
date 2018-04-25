@@ -3,9 +3,11 @@ version: 0.2
 phases:
   build:
     commands:
-      - chmod +x mvnw
-      - ./mvnw prepare-package
-      - ./mvnw package
+      - mvn test
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - mvn package
 artifacts:
   files:
     - '**/*'
