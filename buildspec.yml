@@ -4,7 +4,8 @@ phases:
   build:
     commands:
       - chmod +x mvnw
-      - ./mvnw spring-boot:build-info
+      - ./mvnw prepare-package
+      - ./mvnw package
 artifacts:
   files:
     - '**/*'
