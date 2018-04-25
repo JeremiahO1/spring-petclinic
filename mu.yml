@@ -1,0 +1,16 @@
+environments:
+- name: acceptance
+- name: production
+service:
+  name: banana-service
+  port: 8080
+  pathPatterns:
+  - /bananas
+  pipeline:
+    source:
+      provider: GitHub
+      repo: JeremiahO1/spring-petclinic
+    build:
+      image: aws/codebuild/java:openjdk-8
+    acceptance:
+      image: aws/codebuild/java:openjdk-8
