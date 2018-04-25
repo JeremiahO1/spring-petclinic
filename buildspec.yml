@@ -3,9 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
-      - cp ./pom.xml /root/.m2/pom.xml
       - chmod +x mvnw
-      - ./mvnw spring-boot:run
+      - ./mvnw spring-boot:build-info
 artifacts:
   files:
     - '**/*'
