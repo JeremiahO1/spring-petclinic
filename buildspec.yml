@@ -3,6 +3,8 @@ version: 0.2
 phases:
   build:
     commands:
+      - mkdir /root/.m2
+      - cp ./pom.xml /root/.m2/pom.xml
       - chmod +x mvnw
       - ./mvnw spring-boot:run
 artifacts:
