@@ -4,9 +4,6 @@ phases:
   build:
     commands:
       - mvn test
-  post_build:
-    commands:
-      - echo Build completed on `date`
       - mvn package
 artifacts:
   files:
