@@ -2,7 +2,7 @@ environments:
 - name: acceptance
 - name: production
 service:
-  name: spring-petclinic
+  name: jo-spring-petclinic
   port: 8080
   pathPatterns:
   - /spring-petclinic
