@@ -6,4 +6,5 @@ phases:
       - mu database upsert production src/resources/db/mysql/schema.sql
       - mu database upsert production src/resources/db/mysql/data.sql
 artifacts:
-   - '**/*'
+  files:
+    - '**/*'
