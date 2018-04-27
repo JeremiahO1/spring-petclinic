@@ -1,7 +1,7 @@
 version: 0.2
 
 phases:
-  deploy:
+  post-build:
     commands:
       - mu database upsert production src/resources/db/mysql/schema.sql
       - mu database upsert production src/resources/db/mysql/data.sql
