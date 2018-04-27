@@ -9,7 +9,7 @@ service:
   environment:
     SPRING_DATASOURCE_USERNAME: ${DatabaseMasterUsername}
     SPRING_DATASOURCE_PASSWORD: ${DatabaseMasterPassword}
-    SPRING_DATASOURCE_URL: jdbc:mysql://${DatabaseEndpointAddress}:${DatabaseEndpointPort}/${DatabaseName}
+    SPRING_DATASOURCE_URL: jdbc:mysql://${DatabaseEndpointAddress}:${DatabaseEndpointPort}/petclinic
   pipeline:
     source:
       provider: GitHub
@@ -20,6 +20,5 @@ service:
       image: aws/codebuild/java:openjdk-8
   database:
     name: PetClinic
-    instanceClass: db.t2.medium
-    iamAuthentication: true
+    instanceClass: db.t2.small
     engine: mysql
